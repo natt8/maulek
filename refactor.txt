@@ -1,0 +1,26 @@
+The 5 card functions I refractored was 
+	1. adventure
+	2. council_room
+	3. feast
+	4. mine
+	5. smithy
+
+
+I figured out which variables were called without being initialized
+within the switch statement and then called them within the parameters
+of those functions.
+
+I created the prototype of the five functions at the top of dominion.c
+so and the definitions of those functions are defined just before the end
+of the dominion code.
+
+Prototypes of the functions: 
+	int Adventure(int, struct *gameState, int *, int, int *);
+
+	int Council_Room(struct *gameState, int *, int);
+
+	int Feast(struct *gameState, int *, int *, int);
+
+	int Mine(struct *gameState, int, int, int *, int);
+
+	int Smithy(int *, struct *gameState, int);
