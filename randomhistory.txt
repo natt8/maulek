@@ -1,0 +1,24 @@
+-------Random Test Gardens Card-------
+
+I tested gardens, this was a fairly easy card to test and so the biggest thing that I changed were
+the parameters that I passed into card effect. I pass it random assigned values for choice, bonuspoint and handpos and then
+checked if the return value was equal to -1. 
+
+After executing the program it outputed that the test ran correctly.
+
+Lines Executed: 100% of 18
+
+-------Random Test Adventure Card-------
+
+I got a compiler error with an undefined reference to some functions that were used from dominion.c
+Those were erased by #including "dominion_helpers.c"
+
+I also got errors with cardEffect, in randomtestadventure they only passed 5 variables when cardEffect expects 7. 
+
+So I added a variable bonus and inserted a random value for handpos
+
+Also, it segfaulted if I just ran the code. I believe this is because players is recieving a random number between 0 and 4.
+
+If it recieved a 0 at any time it segfaulted and i was able to fix this by making it generate a random number between 1 and 4.
+
+Lines Executed: 24.70% of 575
